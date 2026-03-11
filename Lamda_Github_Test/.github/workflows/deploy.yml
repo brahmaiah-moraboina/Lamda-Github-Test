@@ -23,5 +23,5 @@ jobs:
       run: |
         zip function.zip function.py
         aws lambda update-function-code \
-          --function-name my-simple-lambda \
+          --function-name my-lambda \
           --zip-file fileb://function.zip

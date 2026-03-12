@@ -1,8 +1,7 @@
 name: Deploy Lambda
 
 on:
-  push:
-    branches: [ "main" ]
+  workflow_dispatch:   # manual trigger only
 
 jobs:
   deploy:
@@ -15,8 +14,8 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
-        aws-access-key-id: AKIAUOHWXCZRQL6TJEFT
-        aws-secret-access-key: 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
+        aws-access-key-id: AKIAUOHWXCZRUP4ZXHPF
+        aws-secret-access-key: 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
         aws-region: eu-north-1
 
     - name: Package Lambda function

@@ -16,6 +16,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        role-to-assume: arn:aws:iam::305460090467:role/Lamda-Github-Connection
         aws-region: eu-north-1
 
     - name: Package Lambda function

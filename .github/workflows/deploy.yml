@@ -19,9 +19,14 @@ jobs:
         aws-secret-access-key: KkUMnNpyqTKOHwmJJ/2X8xH3inrJWCJs5E939aXk
         aws-region: eu-north-1
 
+    - name: Package Lambda function
+      run: |
+        cd Lamda_Github_Test
+        zip -r ../function.zip .
+        cd ..
+
     - name: Deploy to Lambda
       run: |
-        zip function.zip function.py
         aws lambda update-function-code \
           --function-name my-lambda \
           --zip-file fileb://function.zip

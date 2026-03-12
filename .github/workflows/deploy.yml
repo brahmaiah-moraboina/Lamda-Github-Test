@@ -11,7 +11,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Configure AWS credentials
+    # Configure AWS credentials with static secrets
+    - name: Configure AWS credentials (Secrets + AssumeRole)
       uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
